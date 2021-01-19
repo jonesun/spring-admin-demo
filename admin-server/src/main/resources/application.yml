@@ -1,0 +1,35 @@
+server:
+  port: 8001
+  servlet:
+    context-path: /admin-server
+
+spring:
+  application:
+    name: admin-server
+
+  boot:
+    admin:
+      notify:
+        mail:
+          # 逗号分隔的邮件收件人列表
+          to: xxx@163.com
+          # 开启邮箱通知
+          enabled: false
+          # 不需要发送通知的状态：从状态A:到状态B
+          ignore-changes: {"UNKNOWN:UP"}
+          # 逗号分隔的抄送收件人列表
+          cc: 111@163.com
+          # 发件人
+          from: Spring Boot Admin<222@163.com>
+
+  security:
+    user:
+      name: admin
+      password: admin123
+
+  # 邮件发送者信息
+  mail:
+    host: smtp.163.com
+    username: 333@163.com
+    default-encoding: utf-8
+    password: xxxxxx

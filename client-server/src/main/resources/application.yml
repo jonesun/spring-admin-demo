@@ -1,0 +1,41 @@
+server:
+  port: 8002
+  servlet:
+    context-path: /client-server
+
+spring:
+  boot:
+    admin:
+      client:
+        url: http://127.0.0.1:8001/admin-server
+        instance:
+          # 客户端实例 url
+          service-url: http://127.0.0.1:8002/client-server
+#          prefer-ip: true
+          # 客户端实例名称
+          name: client1
+        username: admin
+        password: admin123
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+        exclude: env,beans
+    jmx:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: ALWAYS
+  health:
+    diskspace:
+      # 当磁盘容量不足5GB时告警
+      threshold: 5GB
+
+logging:
+  pattern:
+    file: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(%5p) %clr(${PID}){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n%wEx"
+  file:
+    name: ./logs/spring-boot-logger-log4j2.log
+#    name: C:/tmp/admin-server/spring-log.log
