@@ -1,0 +1,29 @@
+eureka:
+#  instance:
+#    metadata-map:
+#      user.name: "admin"         #These two are needed so that the server
+#      user.password: "admin123" #can access the protected client endpoints
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+server:
+  port: 8762
+
+spring:
+  application:
+    name: spring-boot-admin-with-eureka-client
+
+#  security:
+#    user:
+#      name: "admin"
+#      password: "admin123"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS

@@ -50,3 +50,13 @@ logging:
   file:
     name: ./logs/spring-boot-logger-log4j2.log
 #    name: C:/tmp/admin-server/spring-log.log
+
+# 利用info端点，加入版本等信息
+info:
+  version: @project.version@
+  name: @project.artifactId@
+  group: @project.groupId@
+  description: @project.description@
+  #还可以自定义信息
+  author: jone sun
+  blog: https://jonesun.github.io/

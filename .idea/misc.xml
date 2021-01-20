@@ -7,6 +7,11 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/admin-server/pom.xml" />
         <option value="$PROJECT_DIR$/client-server/pom.xml" />
+        <option value="$PROJECT_DIR$/client-security-server/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka-server/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka-client/pom.xml" />
+        <option value="$PROJECT_DIR$/client-security-with-eureka-server/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka-client-with-admin-server/pom.xml" />
       </list>
     </option>
   </component>
