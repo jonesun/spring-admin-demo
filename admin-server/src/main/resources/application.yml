@@ -12,15 +12,15 @@ spring:
       notify:
         mail:
           # 逗号分隔的邮件收件人列表
-          to: xxx@163.com
+          to: jone.sun@dwcolorfulworld.com
           # 开启邮箱通知
           enabled: false
           # 不需要发送通知的状态：从状态A:到状态B
           ignore-changes: {"UNKNOWN:UP"}
           # 逗号分隔的抄送收件人列表
-          cc: 111@163.com
+          cc: sunr7@vip.qq.com
           # 发件人
-          from: Spring Boot Admin<222@163.com>
+          from: Spring Boot Admin<sunr922@163.com>
 
   security:
     user:
@@ -30,6 +30,6 @@ spring:
   # 邮件发送者信息
   mail:
     host: smtp.163.com
-    username: 333@163.com
+    username: sunr922@163.com
     default-encoding: utf-8
-    password: xxxxxx
+    password: REMZCJXPXEUKHIEK
