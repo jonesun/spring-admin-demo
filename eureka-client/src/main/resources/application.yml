@@ -1,7 +1,7 @@
 server:
   port: 8763
-#  servlet:
-#    context-path: /eureka-client
+  servlet:
+    context-path: /eureka-client
 
 spring:
   application:
@@ -11,6 +11,10 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+  instance:
+    metadata-map:
+      management:
+        context-path: ${server.servlet.context-path}/actuator
 
 management:
   endpoints:
@@ -20,4 +24,14 @@ management:
   endpoint:
     health:
       show-details: ALWAYS
+
+info:
+  version: @project.version@
+  name: @project.artifactId@
+  group: @project.groupId@
+  description: @project.description@
+  #还可以自定义信息
+  author: jone sun
+  blog: https://jonesun.github.io/
+
 

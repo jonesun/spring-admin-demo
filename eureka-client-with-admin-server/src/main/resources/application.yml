@@ -6,18 +6,25 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
-
+  instance:
+    metadata-map:
+      management:
+        context-path: ${server.servlet.context-path}/actuator
+      user.name: "admin"         #These two are needed so that the server
+      user.password: "admin123" #can access the protected client endpoints
 server:
   port: 8762
+  servlet:
+    context-path: /spring-boot-admin-with-eureka-client
 
 spring:
   application:
     name: spring-boot-admin-with-eureka-client
 
-#  security:
-#    user:
-#      name: "admin"
-#      password: "admin123"
+  security:
+    user:
+      name: "admin"
+      password: "admin123"
 
 management:
   endpoints:
@@ -27,3 +34,12 @@ management:
   endpoint:
     health:
       show-details: ALWAYS
+
+info:
+  version: @project.version@
+  name: @project.artifactId@
+  group: @project.groupId@
+  description: @project.description@
+  #还可以自定义信息
+  author: jone sun
+  blog: https://jonesun.github.io/
