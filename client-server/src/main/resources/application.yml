@@ -14,8 +14,19 @@ spring:
 #          prefer-ip: true
           # 客户端实例名称
           name: client1
+          metadata:
+            user.name: ${spring.security.user.name}
+            user.password: ${spring.security.user.password}
+            tags:
+              environment: DEV
         username: admin
         password: admin123
+
+  security:
+    user:
+      name: user
+      password: 123456
+      roles: SBA_ADMIN
 management:
   endpoints:
     web:
